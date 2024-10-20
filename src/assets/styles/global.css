@@ -3,3 +3,35 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+html {
+    scroll-behavior: smooth;
+}
+body {
+    width: 100vw;
+    min-height: 100vh;
+    overflow-x: hidden;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.color_blue {
+    color: #4036FF;
+}
+
+.container_center_main {
+    width: 80vw;
+    margin: auto;
+    /* border: 1px solid red; */
+}
+
+:root {
+    --color--text: #ffffff;
+    --background--white: #1B1B1B;
+
+    
+}
+
+.theme_Light {
+    --color--text: #000000;
+    --background--white: aliceblue;
+}
