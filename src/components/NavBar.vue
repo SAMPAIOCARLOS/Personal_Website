@@ -11,7 +11,7 @@ import ListNav from './ListNav.vue'
             return {
                 data_path_NavBar: [
                     {id: 1, text_content: 'Inicio', path: '#header'},
-                    {id: 2, text_content: 'Habilidades', path: '#'},
+                    {id: 2, text_content: 'Habilidades', path: '#container_main'},
                     {id: 3, text_content: 'Projetos', path: '#'},
                     {id: 4, text_content: 'Contato', path: '#'}
                 ],
@@ -90,7 +90,7 @@ import ListNav from './ListNav.vue'
 
 <style scoped>
 nav {
-    border: 1px solid red;
+    /* border: 1px solid red; */
     width: 100%;
     height: 10vh;
     position: fixed;
@@ -101,7 +101,7 @@ nav {
 }
 #container_center_navbar {
     width: 80%;
-    border: 1px solid red;
+    /* border: 1px solid red; */
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -111,7 +111,7 @@ h1 {
     font-size: 1.5vw;
 }
 #container_group_NavBar {
-    border: 2px solid blue;
+    /* border: 2px solid blue; */
     width: 50%;
     display: flex;
     justify-content: space-between;

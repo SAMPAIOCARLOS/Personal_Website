@@ -28,7 +28,7 @@ export default {
     list-style: none;
     width: 70%;
     justify-content: space-between;
-    border: 2px solid red;
+    /* border: 2px solid red; */
 }
 li {
     font-size: 1.3vw;

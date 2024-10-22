@@ -34,7 +34,7 @@ button {
     display: flex;
     gap: 10px;
     cursor: pointer;
-    border: 1px solid red;
+    /* border: 1px solid red; */
 }
 
 @media(max-width: 1000px) {
