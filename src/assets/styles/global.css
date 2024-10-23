@@ -53,15 +53,17 @@ body {
      animation: float 2s ease-in-out infinite;
 }
 
+@keyframes wave-animation {
+    0% { transform: rotate(0deg); }
+    10% { transform: rotate(14deg); }
+    20% { transform: rotate(-8deg); }
+    30% { transform: rotate(14deg); }
+    40% { transform: rotate(-4deg); }
+    50% { transform: rotate(10deg); }
+    60% { transform: rotate(0deg); }
+    100% { transform: rotate(0deg); }
+  }
 
-@keyframes float_hand{
-	0%,100%{
-		transform:translatey(0)
-	}
-	50%{
-		transform:translatex(-10px)
-	}
-}
 #hand {
-     animation: float_hand 2s ease-in-out infinite;
+     animation: wave-animation 2s ease-in-out infinite;
 }
