@@ -60,7 +60,7 @@ import Typed from 'typed.js';
             <div id="box_text_content">
                 <h2>Olá, Visitante! <div id="hand">🖐️</div></h2>
                 <h1>Meu nome é Carlos</h1>
-                <h2 id="titleh2">Desenvolvedor <span class="color_blue typed-element"></span></h2>
+                <h2 id="titleh2">Desenvolvedor: <span class="color_blue typed-element"></span></h2>
             </div>
             <div id="box_icons_social">
                 <span class="span_box_icons_social"></span>
@@ -71,7 +71,7 @@ import Typed from 'typed.js';
                     </a>
                 </div>
 
-
+                <!-- faltando apenas a responsividade do parte de icons social -->
 
                 <div class="container_img_social" v-else>
                     <a :href="item_dark.path" target="blank" v-for="item_dark in data_img_social_light" :key="item_dark.id">
@@ -128,7 +128,7 @@ header {
 #container_content_header {
     width: 80vw;
     margin: auto;
-    /* border: 1px solid red; */
+    border: 1px solid red;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -194,5 +194,82 @@ h2 {
     font-size: 3vw;
     margin-top: 20px;
     cursor: pointer;
+}
+
+@media(max-width: 1000px) {
+    #container_content_header {
+        gap: 5vw;
+    }
+    #box_text_content {
+        gap: 3vw;
+    }
+    h1 {
+        font-size: 6vw;
+    }
+
+    h2 {
+        font-size: 3vw;
+    }
+}
+
+@media(max-width: 750px) {
+    h1 {
+        font-size: 8vw;
+    }
+
+    h2 {
+        font-size: 4vw;
+
+    }
+}
+
+@media(max-width: 650px) {
+    #container_content_header {
+        gap: 7vw;
+    }
+    #box_text_content {
+        gap: 7vw;
+    }
+    h1 {
+        font-size: 8.5vw;
+    }
+
+    #titleh2 {
+        flex-wrap: wrap;
+    }
+
+}
+
+@media(max-width: 500px) {
+    #container_content_header {
+        gap: 10vw;
+        width: 95vw;
+        height: 50vh;
+    }
+    #box_text_content {
+        gap: 10vw;
+    }
+    h1 {
+        font-size: 10vw;
+    }
+    h2 {
+        font-size: 6vw;
+    }
+}
+@media(max-width: 350px) {
+    #container_content_header {
+        gap: 10vw;
+        width: 95vw;
+        height: 70vh;
+    }
+    #box_text_content {
+        gap: 10vw;
+    }
+    h1 {
+        font-size: 12vw;
+    }
+    h2 {
+        font-size: 8vw;
+    }
 }
 </style>
