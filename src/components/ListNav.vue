@@ -5,11 +5,19 @@
             data_listNav: { type: Array, required: true }
         },
         methods: {
-            router_contact(title) {
-                if(title === 'Contato') {
-
-                    alert(title)
-                    this.$router.push({ name: 'Contact', params: { title } });
+            handleNavigation(item) {
+                if(item.text_content === 'Contato') {
+                    this.$router.push({ name: 'Contact', params: { title: item.text_content } });
+                } else if (this.$route.name === 'Contact' || this.$route.name === 'Details') {
+                    // Se estiver em Contact ou Details, volte para home antes de navegar para a âncora
+                    this.$router.push('/').then(() => {
+                        setTimeout(() => {
+                            document.querySelector(item.path)?.scrollIntoView({ behavior: 'smooth' });
+                        }, 100);
+                    });
+                } else {
+                    // Navegação normal para âncoras quando estiver na home
+                    document.querySelector(item.path)?.scrollIntoView({ behavior: 'smooth' });
                 }
             }
         }
@@ -18,9 +26,10 @@
 
 <template>
     <ul>
-        <li v-for="item_NavBar in data_listNav" :key="item_NavBar.id" @click="router_contact(item_NavBar.text_content)">
+        <li v-for="item_NavBar in data_listNav" :key="item_NavBar.id" 
+            @click="handleNavigation(item_NavBar)">
             <ion-icon class="icons_lisFull" :name="item_NavBar.icon"></ion-icon>
-            <a :href="item_NavBar.path">{{ item_NavBar.text_content }}</a>
+            <a href="javascript:void(0)">{{ item_NavBar.text_content }}</a>
         </li>
     </ul>
 </template>

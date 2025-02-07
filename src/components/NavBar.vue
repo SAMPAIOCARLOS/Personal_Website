@@ -13,9 +13,9 @@ export default {
     data() {
         return {
             data_path_NavBar: [
-                {id: 1, text_content: 'Inicio', path: 'http://localhost:3000/#header', icon: 'home-outline'},
-                {id: 2, text_content: 'Habilidades', path: 'http://localhost:3000/#container_skills', icon: 'hammer-outline'},
-                {id: 3, text_content: 'Projetos', path: 'http://localhost:3000/#container_project', icon: 'bag-check-outline'},
+                {id: 1, text_content: 'Inicio', path: '#header', icon: 'home-outline'},
+                {id: 2, text_content: 'Habilidades', path: '#container_skills', icon: 'hammer-outline'},
+                {id: 3, text_content: 'Projetos', path: '#container_project', icon: 'bag-check-outline'},
                 {id: 4, text_content: 'Contato', path: '', icon: 'call-outline'}
             ],
             show_listFull: false,
@@ -42,6 +42,9 @@ export default {
         },
         pass_eventToggle_theme() {
             this.$emit("pass_eventToggle_theme")
+        },
+        handleContact() {
+            this.$router.push({ name: 'Contact', params: { title: 'Contato' } });
         }
     }
 }
@@ -53,7 +56,7 @@ export default {
         <div class="container_main_center">
             <div id="content_navBar">
                 <div id="container_logo">
-                    <a href="http://localhost:3000">
+                    <a href="/">
                         <img src="/src/assets/images/CARLOS SAMPAIO _ DEV_LIGHT.png" alt="imagem da logo principal" v-if="show_logoNavBar">
                         <img src="/src/assets/images/CARLOS SAMPAIO _ DEV_DARK.png" alt="imagem da logo principal" v-else>
                     </a>
