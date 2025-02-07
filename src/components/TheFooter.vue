@@ -6,9 +6,9 @@ export default {
             data_lists_footer: [
                 [
                     { title: 'Links contato', itensList: [
-                        { name: 'Inicio', path: 'http://localhost:3000/#header' },
-                        { name: 'Habilidades', path: 'http://localhost:3000/#container_skills' },
-                        { name: 'Projetos', path: 'http://localhost:3000/#container_project' },
+                        { name: 'Inicio', path: '#header' },
+                        { name: 'Habilidades', path: '#container_skills' },
+                        { name: 'Projetos', path: '#container_project' },
                         { name: 'Contato', path: '' }
                     ] }
                 ],
