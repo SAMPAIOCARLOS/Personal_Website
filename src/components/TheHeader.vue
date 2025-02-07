@@ -16,7 +16,9 @@ import Typed from 'typed.js';
                 ],
                 array_names: ['Desenvolvedor front-end', 'Front-end developer', 'Desenvolvedor front-end', 'Front-end developer'],
                 typed: null,
-                path_href: '#container_skills'
+                path_href: '#container_skills',
+                logoImage: new URL('../assets/images/logo.png', import.meta.url).href,
+                profileImage: new URL('../assets/images/profile.jpg', import.meta.url).href,
             }
         },
         props: {

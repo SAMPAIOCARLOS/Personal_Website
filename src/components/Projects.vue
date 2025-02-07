@@ -6,7 +6,16 @@ export default {
     components: { CardsProject },
     data() {
         return {
-            name_project: 'Projetos'
+            name_project: 'Projetos',
+            projects: [
+                {
+                    id: 1,
+                    title: "Projeto 1",
+                    image: new URL('../assets/images/projects/project1.jpg', import.meta.url).href,
+                    // ... outros dados do projeto
+                },
+                // ... outros projetos
+            ]
         }
     }
 }
