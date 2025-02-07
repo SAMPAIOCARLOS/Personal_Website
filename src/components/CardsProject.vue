@@ -1,4 +1,5 @@
 <script>
+import { getImageUrl } from '../utils/imageHelper'
 
 export default {
     name: "CardsProject",
@@ -7,23 +8,23 @@ export default {
             dataCards_project: [
                 { 
                     id: 1,
-                    path_img: new URL('../assets/images/imagemDetailsPersonal_website.png', import.meta.url).href,
-                    path_img_logoName: new URL('../assets/images/logoDetalispage.png', import.meta.url).href,
+                    path_img: getImageUrl('imagemDetailsPersonal_website.png'),
+                    path_img_logoName: getImageUrl('logoDetalispage.png'),
                     title: 'Personal WebSite',
                     text: 'Este projeto é um portfólio pessoal interativo desenvolvido com Vue.js. ',
                     data_Icon: [
                         { 
-                            name_icon: new URL('../assets/images/vue.png', import.meta.url).href,
+                            name_icon: getImageUrl('vue.png'),
                             name_tech: 'VUE',
                             color: '#42B883'
                         },
                         { 
-                            name_icon: new URL('../assets/images/typescript.png', import.meta.url).href,
+                            name_icon: getImageUrl('typescript.png'),
                             name_tech: 'TYPESCRIPT',
                             color: '#C53635'
                         },
                         { 
-                            name_icon: new URL('../assets/images/npm.png', import.meta.url).href,
+                            name_icon: getImageUrl('npm.png'),
                             name_tech: 'NPM',
                             color: '#C53635'
                         }
@@ -31,49 +32,93 @@ export default {
                 },
                 { 
                     id: 2,
-                    path_img: '/src/assets/images/imagemDetailsEasybank.png',
-                    path_img_logoName: '/src/assets/images/logoDetailspageEasybank.png',
+                    path_img: getImageUrl('imagemDetailsEasybank.png'),
+                    path_img_logoName: getImageUrl('logoDetailspageEasybank.png'),
                     title: 'Easybank',
                     text: 'Este é um projeto de landing page com quatro seções para promover o banco Easybank.',
                     data_Icon: [
-                        { name_icon: '/src/assets/images/vue.png', name_tech: 'VUE', color: '#42B883' },
-                        { name_icon: '/src/assets/images/npm.png', name_tech: 'NPM', color: '#C53635' }
+                        { 
+                            name_icon: getImageUrl('vue.png'),
+                            name_tech: 'VUE',
+                            color: '#42B883'
+                        },
+                        { 
+                            name_icon: getImageUrl('npm.png'),
+                            name_tech: 'NPM',
+                            color: '#C53635'
+                        }
                     ],
                 },
                 { 
                     id: 3,
-                    path_img: '/src/assets/images/imagemDetailsDiscoverBank.png',
-                    path_img_logoName: '/src/assets/images/logoDetailspageDiscoverLand.png',
+                    path_img: getImageUrl('imagemDetailsDiscoverBank.png'),
+                    path_img_logoName: getImageUrl('logoDetailspageDiscoverLand.png'),
                     title: 'Discover land',
                     text: 'Este projeto exibe fotos de países e informações detalhadas em um modal, com um campo de busca.',
                     data_Icon: [
-                        { name_icon: '/src/assets/images/vue.png', name_tech: 'VUE', color: '#42B883' },
-                        { name_icon: '/src/assets/images/npm.png', name_tech: 'NPM', color: '#C53635' }
+                        { 
+                            name_icon: getImageUrl('vue.png'),
+                            name_tech: 'VUE',
+                            color: '#42B883'
+                        },
+                        { 
+                            name_icon: getImageUrl('npm.png'),
+                            name_tech: 'NPM',
+                            color: '#C53635'
+                        }
                     ],
                 },
                 { 
                     id: 4,
-                    path_img: '/src/assets/images/imagemDetailsAgendamentoFmrb.png',
-                    path_img_logoName: '/src/assets/images/logoDetailsFMRB.png',
+                    path_img: getImageUrl('imagemDetailsAgendamentoFmrb.png'),
+                    path_img_logoName: getImageUrl('logoDetailsFMRB.png'),
                     title: 'Agedamento FMRB',
                     text: 'Projeto governamental para desenvolvimento de um sistema de agendamento de visitas para à (FMRB).',
                     data_Icon: [
-                        { name_icon: '/src/assets/images/html.png', name_tech: 'HTML5', color: '#F05032' },
-                        { name_icon: '/src/assets/images/css.png', name_tech: 'CSS3', color: '#1098fa' },
-                        { name_icon: '/src/assets/images/javascript.png', name_tech: 'JAVASCRIPT', color: '#F7DF1E' }
+                        { 
+                            name_icon: getImageUrl('html.png'),
+                            name_tech: 'HTML5',
+                            color: '#F05032'
+                        },
+                        { 
+                            name_icon: getImageUrl('css.png'),
+                            name_tech: 'CSS3',
+                            color: '#1098fa'
+                        },
+                        { 
+                            name_icon: getImageUrl('javascript.png'),
+                            name_tech: 'JAVASCRIPT',
+                            color: '#F7DF1E'
+                        }
                     ],
                 },
                 { 
                     id: 5,
-                    path_img: '/src/assets/images/imagemDetailsSeloQuilomnos.png',
-                    path_img_logoName: '/src/assets/images/logoDetailsSelo.png',
+                    path_img: getImageUrl('imagemDetailsSeloQuilomnos.png'),
+                    path_img_logoName: getImageUrl('logoDetailsSelo.png'),
                     title: 'Selo Quilombos',
                     text: 'Projeto governamental para desenvolvimento de um Portal de notícias com dois formularios para o uso do selo',
                     data_Icon: [
-                        { name_icon: '/src/assets/images/html.png', name_tech: 'HTML5', color: '#F05032' },
-                        { name_icon: '/src/assets/images/css.png', name_tech: 'CSS3', color: '#1098fa' },
-                        { name_icon: '/src/assets/images/javascript.png', name_tech: 'JAVASCRIPT', color: '#F7DF1E' },
-                        { name_icon: '/src/assets/images/wordpress.png', name_tech: 'WORDPRESS', color: '#1098fa' }
+                        { 
+                            name_icon: getImageUrl('html.png'),
+                            name_tech: 'HTML5',
+                            color: '#F05032'
+                        },
+                        { 
+                            name_icon: getImageUrl('css.png'),
+                            name_tech: 'CSS3',
+                            color: '#1098fa'
+                        },
+                        { 
+                            name_icon: getImageUrl('javascript.png'),
+                            name_tech: 'JAVASCRIPT',
+                            color: '#F7DF1E'
+                        },
+                        { 
+                            name_icon: getImageUrl('wordpress.png'),
+                            name_tech: 'WORDPRESS',
+                            color: '#1098fa'
+                        }
                     ],
                 }
             ]
