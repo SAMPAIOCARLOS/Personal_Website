@@ -1,37 +1,18 @@
 <script>
+
 export default {
     name: 'Skills',
     data() {
         return {
-            skills: [
-                {
-                    name: "HTML",
-                    icon: new URL('../assets/images/skills/html.svg', import.meta.url).href,
-                },
-                {
-                    name: "CSS",
-                    icon: new URL('../assets/images/skills/css.svg', import.meta.url).href,
-                },
-                {
-                    name: "JAVASCRIPT",
-                    icon: new URL('../assets/images/skills/javascript.svg', import.meta.url).href,
-                },
-                {
-                    name: "VUE.JS",
-                    icon: new URL('../assets/images/skills/vue.svg', import.meta.url).href,
-                },
-                {
-                    name: "GIT",
-                    icon: new URL('../assets/images/skills/git.svg', import.meta.url).href,
-                },
-                {
-                    name: "GITHUB",
-                    icon: new URL('../assets/images/skills/github.svg', import.meta.url).href,
-                },
-                {
-                    name: "FIGMA",
-                    icon: new URL('../assets/images/skills/figma.svg', import.meta.url).href,
-                }
+            namesSkilss: ['HTML', 'CSS', 'JAVASCRIPT', 'VUE.JS', 'GIT', 'GITHUB', 'FIGMA'],
+            data_iconsSkills: [
+                { id: 1, nameIcon: 'logo-html5', name: 'HTML' },
+                { id: 2, nameIcon: 'logo-css3', name: 'CSS' },
+                { id: 3, nameIcon: 'logo-javascript', name: 'JAVASCRIPT' },
+                { id: 4, nameIcon: 'logo-vue', name: 'VUE' },
+                { id: 5, nameIcon: 'git-branch-outline', name: 'GIT' },
+                { id: 6, nameIcon: 'logo-github', name: 'GITHUB' },
+                { id: 7, nameIcon: 'logo-figma', name: 'FIGMA' }
             ],
             highlightedIndex: null
         }
@@ -59,6 +40,7 @@ export default {
             return '';
         }
     },
+
 }
 </script>
 
@@ -77,8 +59,8 @@ export default {
                     <div id="box_namesSkills">
                         <h2 class="color_blue">hard skills</h2>
                         <ul id="list_namesSkills">
-                            <li v-for="(itemSkill, index) in skills" :key="index" @mouseover="highlight(index)" @mouseleave="removehighlight(index)">
-                                {{ itemSkill.name }}
+                            <li v-for="(itemSkill, index) in namesSkilss" :key="index" @mouseover="highlight(index)" @mouseleave="removehighlight(index)">
+                                {{ itemSkill }}
                             </li>
                         </ul>
                     </div>
@@ -86,9 +68,9 @@ export default {
 
                 <section id="container_icons_tech">
                     <ul id="list_iconsTech">
-                        <li v-for="(itemSkill, index) in skills" :key="index" :class="getHighlightClass(index)">
-                            <img :src="itemSkill.icon" alt="Skill Icon" class="skill-icon">
-                            <p class="nameTech">{{ itemSkill.name }}</p>
+                        <li v-for="(item_iconSkills, index) in data_iconsSkills" :key="index" :class="getHighlightClass(index)">
+                            <ion-icon :name="item_iconSkills.nameIcon"></ion-icon>
+                            <p class="nameTech">{{ item_iconSkills.name}}</p>
                         </li>
                     </ul>
                 </section>
