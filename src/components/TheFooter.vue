@@ -1,19 +1,40 @@
 <script>
 export default {
     name: 'TheFooter',
+    methods: {
+        handleNavigation(item) {
+            if (item.path.startsWith('http')) {
+                // Se for um link externo, abre em uma nova aba
+                window.open(item.path, '_blank');
+            } else if (item.name === 'Contato') {
+                // Se for "Contato", navega para a página de contato
+                this.$router.push({ name: 'Contact', params: { title: item.name } });
+            } else if (this.$route.name === 'Contact' || this.$route.name === 'Details') {
+                // Se estiver em Contact ou Details, volta para a home antes de rolar para a âncora
+                this.$router.push('/').then(() => {
+                    setTimeout(() => {
+                        document.querySelector(item.path)?.scrollIntoView({ behavior: 'smooth' });
+                    }, 100);
+                });
+            } else {
+                // Se já estiver na home, apenas rola até o elemento correspondente
+                document.querySelector(item.path)?.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+    },
     data() {
         return {
             data_lists_footer: [
                 [
-                    { title: 'Links contato', itensList: [
-                        { name: 'Inicio', path: '#header' },
+                    { title: 'Links úteis', itensList: [
+                        { name: 'Início', path: '#header' },
                         { name: 'Habilidades', path: '#container_skills' },
                         { name: 'Projetos', path: '#container_project' },
                         { name: 'Contato', path: '' }
                     ] }
                 ],
                 [
-                    { title: 'Links contato', itensList: [
+                    { title: 'Contato', itensList: [
                         { name: 'sampaiocarlos957@gmail.com', path: '' },
                         { name: '(99)99999-9999', path: '' }
                     ] }
@@ -37,17 +58,17 @@ export default {
             <div id="container_content_footer">
                 <div id="box_logo">
                     <img src="/src/assets/images/CARLOS SAMPAIO _ DEV_DARK.png" alt="">
-
                     <p class="phrase_footer">Cada linha de código é um passo em direção a transformar ideias em realidade.</p>
-
                     <p class="phrase_footer">Nos vemos em breve!</p>
                 </div>
                 <div id="container_listsFooter">
                     <ul v-for="Arrays_obj in data_lists_footer" :key="Arrays_obj">
                         <li v-for="ObjTo_array in Arrays_obj" :key="ObjTo_array">
                             <h1>{{ ObjTo_array.title }}</h1>
-                            <p v-for="arrayToObj in ObjTo_array.itensList" :key="arrayToObj">
-                                <a :href="arrayToObj.path">{{ arrayToObj.name }}</a>
+                            <p v-for="arrayToObj in ObjTo_array.itensList" 
+                               :key="arrayToObj" 
+                               @click="handleNavigation(arrayToObj)">
+                                <a href="javascript:void(0)">{{ arrayToObj.name }}</a>
                             </p>
                         </li>
                     </ul>
@@ -56,6 +77,7 @@ export default {
         </div>
     </footer>
 </template>
+
 
 <style scoped>
 footer {
