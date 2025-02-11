@@ -54,7 +54,7 @@ export default {
 
                     <h1>HABILIDADES</h1>
 
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cupiditate iusto laboriosam reiciendis deserunt minus, sapiente doloremque autem, repellendus quo, at assumenda enim. Maxime quaerat, iure numquam ipsam nulla natus aliquid!</p>
+                    <p>Tenho experiência em desenvolvimento web, com foco em front-end, utilizando HTML, CSS e JavaScript para criar interfaces modernas e responsivas. Meu conhecimento em Vue.js me permite desenvolver aplicações dinâmicas e performáticas, utilizando conceitos como componentização, Vue Router e gerenciamento de estado.</p>
 
                     <div id="box_namesSkills">
                         <h2 class="color_blue">hard skills</h2>
