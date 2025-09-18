@@ -54,7 +54,9 @@ export default {
 
                     <h1>HABILIDADES</h1>
 
-                    <p>Tenho experiência em desenvolvimento web, com foco em front-end, utilizando HTML, CSS e JavaScript para criar interfaces modernas e responsivas. Meu conhecimento em Vue.js me permite desenvolver aplicações dinâmicas e performáticas, utilizando conceitos como componentização, Vue Router e gerenciamento de estado.</p>
+                    <p>Tenho experiência em desenvolvimento web, com foco em front-end, utilizando HTML, CSS e JavaScript para criar interfaces modernas e responsivas. Meu conhecimento em Vue.js me permite desenvolver aplicações dinâmicas e performáticas, aplicando conceitos como componentização, Vue Router e gerenciamento de estado.
+
+Além disso, possuo experiência em PHP e MySQL para o desenvolvimento de back-end, criando APIs e sistemas integrados. Também tenho conhecimentos em Python e busco constantemente aprimorá-los, expandindo minhas habilidades para me tornar um desenvolvedor full stack completo.</p>
 
                     <div id="box_namesSkills">
                         <h2 class="color_blue">hard skills</h2>
