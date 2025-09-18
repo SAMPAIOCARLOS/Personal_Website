@@ -14,7 +14,7 @@ import Typed from 'typed.js';
                     { id: 2, path: 'https://github.com/SAMPAIOCARLOS', name: 'logo-github' },
                     { id: 3, path: 'https://mail.google.com/mail/u/1/?pli=1#inbox', name: 'mail-outline' }
                 ],
-                array_names: ['Desenvolvedor front-end', 'Front-end developer', 'Desenvolvedor front-end', 'Front-end developer'],
+                array_names: ['Desenvolvedor FullStack', 'FullStack developer', 'Desenvolvedor FullStack', 'FullStack developer'],
                 typed: null,
                 path_href: '#container_skills',
                 logoImage: new URL('../assets/images/logo.png', import.meta.url).href,
