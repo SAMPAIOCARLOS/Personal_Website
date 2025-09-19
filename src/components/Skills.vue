@@ -4,7 +4,7 @@ export default {
     name: 'Skills',
     data() {
         return {
-            namesSkilss: ['HTML', 'CSS', 'JAVASCRIPT', 'VUE.JS', 'GIT', 'GITHUB', 'FIGMA'],
+            namesSkilss: ['HTML', 'CSS', 'JAVASCRIPT', 'VUE.JS', 'GIT', 'GITHUB', 'FIGMA', 'PYTHON'],
             data_iconsSkills: [
                 { id: 1, nameIcon: 'logo-html5', name: 'HTML' },
                 { id: 2, nameIcon: 'logo-css3', name: 'CSS' },
@@ -12,7 +12,8 @@ export default {
                 { id: 4, nameIcon: 'logo-vue', name: 'VUE' },
                 { id: 5, nameIcon: 'git-branch-outline', name: 'GIT' },
                 { id: 6, nameIcon: 'logo-github', name: 'GITHUB' },
-                { id: 7, nameIcon: 'logo-figma', name: 'FIGMA' }
+                { id: 7, nameIcon: 'logo-figma', name: 'FIGMA' },
+                { id: 7, nameIcon: 'logo-python', name: 'PYTHON' }
             ],
             highlightedIndex: null
         }
@@ -34,6 +35,7 @@ export default {
                     case 4: return 'highlighted_git';
                     case 5: return 'highlighted_github';
                     case 6: return 'highlighted_figma';
+                    case 7: return 'highlighted_python';
                     default: return '';
                 }
             }

@@ -6,8 +6,42 @@ export default {
     data() {
         return {
             dataCards_project: [
-                { 
+                {
                     id: 1,
+                    path_img: getImageUrl('imagemDataSincContrata.png'),
+                    path_img_logoName: getImageUrl('Disparador_Emails.png'),
+                    title: 'Data Sinc Contrata',
+                    text: 'Sistema web para gestão de documentos no formato JSON',
+                    data_Icon: [
+                        {
+                            name_icon: getImageUrl('html.png'),
+                            name_tech: 'HTML5',
+                            color: '#F05032'
+                        },
+                        {
+                            name_icon: getImageUrl('css.png'),
+                            name_tech: 'CSS3',
+                            color: '#1098fa'
+                        },
+                        {
+                            name_icon: getImageUrl('javascript.png'),
+                            name_tech: 'JAVASCRIPT',
+                            color: '#F7DF1E'
+                        },
+                        {
+                            name_icon: getImageUrl('php.png'),
+                            name_tech: 'PHP',
+                            color: '#F7DF1E'
+                        },
+                        {
+                            name_icon: getImageUrl('mysql.png'),
+                            name_tech: 'MYSQL',
+                            color: '#F7DF1E'
+                        }
+                    ],
+                },
+                { 
+                    id: 2,
                     path_img: getImageUrl('imagemDetailsDisparador_emails.png'),
                     path_img_logoName: getImageUrl('Disparador_Emails.png'),
                     title: 'Disparador de emails',
@@ -36,7 +70,7 @@ export default {
                     ],
                 },
                 { 
-                    id: 2,
+                    id: 3,
                     path_img: getImageUrl('imagemDetailsPersonal_website.png'),
                     path_img_logoName: getImageUrl('logoDetalispage.png'),
                     title: 'Personal WebSite',
@@ -60,7 +94,7 @@ export default {
                     ],
                 },
                 { 
-                    id: 3,
+                    id: 4,
                     path_img: getImageUrl('imagemDetailsEasybank.png'),
                     path_img_logoName: getImageUrl('logoDetailspageEasybank.png'),
                     title: 'Easybank',
@@ -79,7 +113,7 @@ export default {
                     ],
                 },
                 { 
-                    id: 4,
+                    id: 5,
                     path_img: getImageUrl('imagemDetailsDiscoverBank.png'),
                     path_img_logoName: getImageUrl('logoDetailspageDiscoverLand.png'),
                     title: 'Discover land',
@@ -98,7 +132,7 @@ export default {
                     ],
                 },
                 { 
-                    id: 5,
+                    id: 6,
                     path_img: getImageUrl('imagemDetailsAgendamentoFmrb.png'),
                     path_img_logoName: getImageUrl('logoDetailsFMRB.png'),
                     title: 'Agedamento FMRB',
@@ -122,7 +156,7 @@ export default {
                     ],
                 },
                 { 
-                    id: 6,
+                    id: 7,
                     path_img: getImageUrl('imagemDetailsSeloQuilomnos.png'),
                     path_img_logoName: getImageUrl('logoDetailsSelo.png'),
                     title: 'Selo Quilombos',
